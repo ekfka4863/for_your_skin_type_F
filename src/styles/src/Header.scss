@@ -1,0 +1,95 @@
+@import "../common/mixin";
+
+
+/* #headBox - laptop, desktop */ 
+#headBox {
+  position: fixed;
+  top: 0;
+  left: 0; 
+  z-index: 1000;
+  width: 100%;
+  height: 80px;
+  padding: 0 30px;
+  background-color: $white2;
+  // background-color: #ea1;
+  .navigation {
+    display: flex;
+    .nav_open_btn {
+      display: none;
+    }
+    .nav_bar {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      list-style: none;
+      // background-color: red;
+      li {
+        width: 200px;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        // background-color: #ae1;
+        // outline: 1px solid #333;
+        a {
+          display: block;
+          width: 100%;
+          text-align: center;
+          text-decoration: none;
+          line-height: 60px;
+          color: $dark-gray;
+          font-size: 28px;
+          font-weight: 900;
+          text-shadow: 7px 9px 4px rgba(0, 0, 0, 0.2);
+          // background-color: #eea;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/* #headBox - mobile */ 
+@include mobile {
+  #headBox {
+    // z-index: -1;  // 나중에 체크하기 ... 
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    .navigation {
+      display: none;
+      .nav_open_btn {
+        // display: none;
+      }
+      .nav_bar {
+        li {
+          a {}
+        }
+      }
+    }
+  }
+};
+
+/* #headBox - tablet */ 
+@include tablet {
+  #headBox {
+    // z-index: -1;  // 나중에 체크하기 ... 
+    width: 80px;
+    height: 100vh;
+    border-right: 1px solid rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    .navigation {
+      display: none;
+      .nav_open_btn {
+        // display: none;
+      }
+      .nav_bar {
+        li {
+          a {}
+        }
+      }
+    }
+  }
+};
