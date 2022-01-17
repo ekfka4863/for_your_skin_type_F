@@ -555,7 +555,25 @@
     }// .test_box_result
   
     .home_btn {
-      display: none;
+      position: absolute;
+      top: 50px;
+      right: 50px;
+      width: 50px;
+      height: 50px;
+      // background-color: #ea1;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../assets/img/laptop/home.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+      }
+      a:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
     }// .home_btn
   }
 }
