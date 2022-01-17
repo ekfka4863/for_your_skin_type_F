@@ -81,13 +81,34 @@
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
     .navigation {
-      display: none;
+      display: flex;
       .nav_open_btn {
-        // display: none;
+        display: none;
       }
       .nav_bar {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        list-style: none;
+        // background-color: red;
         li {
-          a {}
+          width: 200px;
+          padding: 10px 15px;
+          box-sizing: border-box;
+          // background-color: #ae1;
+          // outline: 1px solid #333;
+          a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            line-height: 60px;
+            color: $dark-gray;
+            font-size: 28px;
+            font-weight: 900;
+            text-shadow: 7px 9px 4px rgba(0, 0, 0, 0.2);
+            // background-color: #eea;
+          }
         }
       }
     }

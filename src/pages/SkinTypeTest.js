@@ -90,7 +90,7 @@ function SkinTypeTest () {
   // test input 관련 변수랑 함수들
   // let testValues = useRef(['1', '2', '3', '4']);
   let testValues = useRef(['', '', '', '']);
-  console.log(testValues.current);  // (4) ['', '', '', ''] -> array
+  console.log(testValues.current);  // (4) ['', '', '', ''] -> array
 
 
   const onClickInput1 = (e) => {
@@ -131,9 +131,6 @@ function SkinTypeTest () {
   };
 
 
-  
-  // 피부 테스트 결과물인 testValues 배열로... 피부 타입 도출하기!
-  // const [skinType, setSkinType] = useState("");
   let skinType = "";
 
   function guessSkinType () {
@@ -166,7 +163,7 @@ function SkinTypeTest () {
     switch (testValues.current[1]) {
       case "수분감":
         possibility.forEach((value) => {
-          const tempArr = ["건성"];
+          const tempArr = ["건성", "복합성"];
           tempArr.forEach((tempValue) => {
             if (value === tempValue) {
               result.push(tempValue);
@@ -180,7 +177,7 @@ function SkinTypeTest () {
         break;
       case "흡수력":
         possibility.forEach((value) => {
-          const tempArr = ["민감성", "지성", "건성", "복합성"];
+          const tempArr = ["민감성", "건성"];
           tempArr.forEach((tempValue) => {
             if (value === tempValue) {
               result.push(tempValue);
@@ -234,20 +231,22 @@ function SkinTypeTest () {
       switch (testValues.current[2]) {
         case "물형":
           possibility.forEach((value) => {
-            const tempArr = ["지성", "복합성"];
+            const tempArr = ["지성"];
             tempArr.forEach((tempValue) => {
               if (value === tempValue) {
                 result2.push(tempValue);
-              }
+              } 
             })
           })
           if (result2.length !== 0) {
             possibility = result2;
+          } else {
+            possibility = ["지성"];
           }
           break;
         case "오일형":
           possibility.forEach((value) => {
-            const tempArr = ["민감성", "건성"];
+            const tempArr = ["건성"];
             tempArr.forEach((tempValue) => {
               if (value === tempValue) {
                 result2.push(tempValue);
@@ -256,11 +255,13 @@ function SkinTypeTest () {
           })
           if (result2.length !== 0) {
             possibility = result2;
+          } else {
+            possibility = ["건성"];
           }
           break;
         case "크림형":
           possibility.forEach((value) => {
-            const tempArr = ["민감성", "건성", "복합성"];
+            const tempArr = ["건성"];
             tempArr.forEach((tempValue) => {
               if (value === tempValue) {
                 result2.push(tempValue);
@@ -269,6 +270,8 @@ function SkinTypeTest () {
           })
           if (result2.length !== 0) {
             possibility = result2;
+          }  else {
+            possibility = ["건성"];
           }
           break;
         case "상관없음":
@@ -282,6 +285,8 @@ function SkinTypeTest () {
           })
           if (result2.length !== 0) {
             possibility = result2;
+          } else {
+            possibility = ["복합성"];
           }
           break;
         default:
@@ -294,7 +299,8 @@ function SkinTypeTest () {
     if (possibility.length === 1) {
       skinType = possibility[0];
     } else {
-      console.log("에러에러!!! 타입이 여러개가 나옴!!");   // 이거 해결 해야함 ... 
+      console.log("에러에러!!! 타입이 여러개가 나옴!!");   // 이거 해결 해야함 
+      console.log(possibility);
       // 이거 해결 .... ㅠㅠㅠ
       // 랜덤으로 ...???????? 여러개의 타입중 하나를 암꺼나 골라 ...?? 
     }
@@ -325,7 +331,7 @@ function SkinTypeTest () {
   }
   
 
-  
+  // 레이아웃 시작
   return (
     <>
       {!(viewportWidth >= 1280) ? <Header /> : null}

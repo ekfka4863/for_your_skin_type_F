@@ -5,6 +5,7 @@
 #viewBox {
   padding-top: 80px;
   
+  // 불투명한 막 
   .bgblack{
     position: absolute;
     z-index: 999;
@@ -13,8 +14,14 @@
     left: 0px;
     top: 0px;
     background: rgba(0, 0, 0, 0.25);
-  }
+  }// 불투명한 막 
 
+
+  // e.g. 마지막 인디케이터 묶음! 
+  // .indicator_group:last-child {
+  //   bottom:10%; left:38%;
+  // }
+  // 인디케이터 
   .Left_button{
     img{
       position: absolute;
@@ -73,15 +80,15 @@
         margin-right:1em;
         }
       
-  } 
+  }// 인디케이터
 
+  // 슬라이더들
   .dr_jart_box {
     position: relative;
     width:100vw;
     height: 100vh;
     // padding-top: 80px;
   
-
     .slider {
       .DrJart_slide{
      
@@ -95,7 +102,7 @@
       
     
       }
-  }
+  }// .dr_jart_box
 
   .innisfree_box {
     position: relative;
@@ -113,7 +120,9 @@
           }
        
     }
-  }
+  }// .innisfree_box
+
+
   .seedmool_box {
     position: relative;
     width: 100%;
@@ -131,7 +140,9 @@
         }
     
     }
-  }
+  }// .seedmool_box
+
+
   .beplain_box {
     position: relative;
     width: 100%;
@@ -149,7 +160,10 @@
         }
    
      }
-  }
+  }// .beplain_box
+
+
+  // 테스트 버튼
   .skin_type_test_btn {
     position: fixed;
     z-index: 9999;
@@ -171,7 +185,7 @@
         font-size: 30px;
       }
     }
-  }
+  }// 테스트 버튼
 }
 
 
