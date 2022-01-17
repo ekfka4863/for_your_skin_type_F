@@ -1,0 +1,66 @@
+@import "../common/mixin";
+
+
+/* #viewBox - laptop, desktop */ 
+#viewBox {
+  .dr_jart_box {
+    width: 100%;
+    height: 100vh;
+    padding-top: 80px;
+    background-color: #2571E5;
+    .slider {}
+  }
+  .innisfree_box {
+    width: 100%;
+    height: 100vh;
+    background-color: #4960D7;
+    .slider {}
+  }
+  .seedmool_box {
+    width: 100%;
+    height: 100vh;
+    background-color: #9A8976;
+    .slider {}
+  }
+  .beplain_box {
+    width: 100%;
+    height: 100vh;
+    background-color: #C84861;
+    .slider {}
+  }
+  .skin_type_test_btn {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, 320%);
+    width: 400px;
+    height: 110px;
+    border: 5px solid $white;
+    box-sizing: border-box;
+    filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.3));
+    border-radius: 30px;
+    text-align: center;
+    line-height: 110px;
+
+    button {
+      a {
+        color: $white;
+        font-weight: 900;
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+
+
+/* #viewBox - mobile */ 
+@include mobile { 
+  #viewBox {}
+}
+
+
+
+/* #viewBox - tablet */ 
+@include tablet { 
+  #viewBox {}
+}
