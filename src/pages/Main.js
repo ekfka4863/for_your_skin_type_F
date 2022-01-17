@@ -5,6 +5,10 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 
 import "../styles/src/Main.scss";
+import DaJartSlideBox from "../components/DrJartSlideBox";
+import InnisfreeSlideBox from "../components/InnisfreeSlideBox";
+import SeedmoolSlideBox from "../components/SeedmoolSlideBox";
+import BeplainSlideBox from "../components/BeplainSlideBox";
 
 function Main () {
   return (
@@ -28,37 +32,28 @@ function Main () {
           <h3>
             <span className="blind">닥터자르트 제품 보기</span>
           </h3>
-          <div className="slider">
-            {/* <div> 이미지 갯수만큼 </div> 
-            인디케이터도 만들기  */}
-          </div>
+          <DaJartSlideBox/>
+
         </section>
         <section className="innisfree_box">
           <h3>
             <span className="blind">이니스프리 제품 보기</span>
           </h3>
-          <div className="slider">
-            {/* <div> 이미지 갯수만큼 </div> 
-            인디케이터도 만들기  */}
-          </div>
+         <InnisfreeSlideBox />
         </section>
         <section className="seedmool_box">
           <h3>
             <span className="blind">시드물 제품 보기</span>
           </h3>
-          <div className="slider">
-            {/* <div> 이미지 갯수만큼 </div> 
-            인디케이터도 만들기  */}
-          </div>
+        <SeedmoolSlideBox/>
+
         </section>
         <section className="beplain_box">
           <h3>
             <span className="blind">비플레인 제품 보기</span>
           </h3>
-          <div className="slider">
-            {/* <div> 이미지 갯수만큼 </div> 
-            인디케이터도 만들기  */}
-          </div>
+          <BeplainSlideBox/>
+          
         </section>
 
       </section>
