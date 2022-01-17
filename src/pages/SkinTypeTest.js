@@ -245,9 +245,9 @@ function SkinTypeTest () {
             possibility = result2;
           }
           break;
-        case "콧물형":
+        case "오일형":
           possibility.forEach((value) => {
-            const tempArr = ["민감성", "지성", "건성", "복합성"];
+            const tempArr = ["민감성", "건성"];
             tempArr.forEach((tempValue) => {
               if (value === tempValue) {
                 result2.push(tempValue);
@@ -528,14 +528,14 @@ function SkinTypeTest () {
                     type="radio"
                     name="texture"
                     id="fluid"
-                    value="콧물형"
+                    value="오일형"
                     onClick={onClickInput3}
                   />
                   <span 
                     onClick={onClickSpan3}
-                    style={(testInput3 === "콧물형") ? {backgroundImage: `url(${condition_checked})`} : null}
+                    style={(testInput3 === "오일형") ? {backgroundImage: `url(${condition_checked})`} : null}
                   ></span>
-                  <label htmlFor="fluid">콧물형</label>
+                  <label htmlFor="fluid">오일형</label>
                 </div>
                 <div>
                   <input
