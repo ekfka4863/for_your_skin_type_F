@@ -1,9 +1,9 @@
 @import "../common/mixin";
 
 #wrap {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
+  // width: 100%;
+  // height: auto;
+  // min-height: 100vh;
   padding-top: 80px;
   // background-color: #eee;
 }
@@ -129,7 +129,7 @@
 /* tablet */ 
 @include tablet {
   #wrap {
-    padding-top: 30px;
+    padding-top: 60px;
     padding-left: 80px;
     #bestSellerBox {
       padding: 0 45px;
