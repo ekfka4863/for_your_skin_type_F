@@ -9,16 +9,21 @@
   z-index: 1000;
   width: 100%;
   height: 80px;
-  padding: 0 30px;
   background-color: $white2;
   // background-color: #ea1;
   .navigation {
     display: flex;
+
     .nav_open_btn {
       display: none;
     }
-    .nav_bar {
+    .nav_bar{
+      display: none;
+    }
+    .nav_bar_desktop {
+      position: absolute;
       display: flex;
+      padding:0 100px;
       width: 100%;
       justify-content: space-between;
       list-style: none;
@@ -50,23 +55,86 @@
 
 
 
+
+
 /* #headBox - mobile */ 
 @include mobile {
   #headBox {
     // z-index: -1;  // 나중에 체크하기 ... 
     width: 100%;
-    height: 60px;
+    height: 70px;
     border-bottom: 1px solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
     .navigation {
-      display: none;
-      .nav_open_btn {
-        // display: none;
+      // display: none;
+      .nav_bar_desktop{
+        display: none;
       }
-      .nav_bar {
-        li {
-          a {}
+      .nav_open_btn {
+        display: block;
+        position:absolute;
+        top:11%; right:5%;
+
+        img{
+          left:0; top:0;
+          width: 60px;
+          height: 60px;
+          }
         }
+      // 모달창
+      .nav_bar{
+        position: absolute;
+        z-index: 99999;
+
+        button{
+          img{
+            position:absolute;
+            margin:0 auto;
+            top:7%; left:46%;
+          }
+        }
+          
+        .home_img{
+          position:absolute;
+          top:18%; left:47%;
+        }
+       
+        padding-top:230px;
+        box-sizing: content-box;
+        margin: 0 auto;
+        z-index:999;
+        display: block;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-between;
+        list-style: none;
+        background-color: rgb(255, 255, 255);
+      
+       .nav_bar_close{
+        display:none;
+      }
+   
+        li {
+        
+          padding:20px 15px;
+          margin:0 auto;
+          box-sizing: border-box;
+          // background-color: #ae1;
+          // outline: 1px solid #333;
+          a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            line-height: 60px;
+            color: $dark-gray;
+            font-size: 28px;
+            font-weight: 900;
+            text-shadow: 7px 9px 4px rgba(0, 0, 0, 0.2);
+            // background-color: #eea;
+          }
+        }
+      
       }
     }
   }
@@ -76,24 +144,61 @@
 @include tablet {
   #headBox {
     // z-index: -1;  // 나중에 체크하기 ... 
-    width: 80px;
+    width: 100px;
     height: 100vh;
     border-right: 1px solid rgba(0, 0, 0, 0.3);
     background-color: #fff;
     .navigation {
-      display: flex;
-      .nav_open_btn {
+
+      .nav_bar_desktop{
         display: none;
       }
-      .nav_bar {
-        display: flex;
-        width: 100%;
+      .nav_open_btn {
+        display: block;
+        position:absolute;
+        top:40%; left:20%;
+        img{
+          left:0; top:0;
+          width: 60px;
+          height: 60px;
+          }
+        }
+      // 모달창
+      .nav_bar{
+        position: fixed;
+       z-index: 99999;
+
+        button{
+          img{
+            position:absolute;
+            top:30px; left:100px;
+          }
+        }
+          
+        .home_img{
+          position:absolute;
+          top:120px; left:5px;
+        }
+
+        padding-top:200px;
+        box-sizing: content-box;
+        position: absolute;
+        z-index:999;
+        display: block;
+        width: 250px;
+        height: 100vh;
         justify-content: space-between;
         list-style: none;
-        // background-color: red;
+        background-color: rgb(255, 255, 255);
+      
+      .nav_bar_close{
+        display:none;
+      }
+   
         li {
           width: 200px;
-          padding: 10px 15px;
+          padding:20px 15px;
+          margin:0 auto;
           box-sizing: border-box;
           // background-color: #ae1;
           // outline: 1px solid #333;

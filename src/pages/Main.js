@@ -10,6 +10,8 @@ import InnisfreeSlideBox from "../components/InnisfreeSlideBox";
 import SeedmoolSlideBox from "../components/SeedmoolSlideBox";
 import BeplainSlideBox from "../components/BeplainSlideBox";
 
+
+
 function Main () {
   return (
     <>
@@ -33,13 +35,14 @@ function Main () {
             <span className="blind">닥터자르트 제품 보기</span>
           </h3>
           <DaJartSlideBox/>
-
+          
+  
         </section>
         <section className="innisfree_box">
           <h3>
             <span className="blind">이니스프리 제품 보기</span>
           </h3>
-         <InnisfreeSlideBox />
+        <InnisfreeSlideBox />
         </section>
         <section className="seedmool_box">
           <h3>
