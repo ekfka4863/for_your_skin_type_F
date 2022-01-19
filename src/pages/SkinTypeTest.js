@@ -90,7 +90,7 @@ function SkinTypeTest () {
   // test input 관련 변수랑 함수들
   // let testValues = useRef(['1', '2', '3', '4']);
   let testValues = useRef(['', '', '', '']);
-  console.log(testValues.current);  // (4) ['', '', '', ''] -> array
+  console.log(testValues.current);  // (4) ['', '', '', ''] -> array
 
 
   const onClickInput1 = (e) => {
