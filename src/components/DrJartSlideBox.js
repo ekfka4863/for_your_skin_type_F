@@ -81,6 +81,7 @@ const movepage = index => {
 
     </div>
           
+    <div className='Indicator'>
     <BtnSlide moveSlide={nextSlide} derection={"next"}/>
     <BtnSlide moveSlide={prevSlide} derection={"prev"}/>
 
@@ -89,6 +90,8 @@ const movepage = index => {
         <div onClick={() => movepage(index + 1)}
           className={slideindex === index + 1 ? "filldot" : "emptydot"}></div>
       ))}
+    </div>
+    
     </div>
 
   </div>
