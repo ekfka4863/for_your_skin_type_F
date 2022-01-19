@@ -9,7 +9,7 @@ import closebutton from "../assets/img/tablet/close_btn_tablet.png";
 
 
 
-export default function Modal({sidebar,setSidebar,closeSidebar}) {
+export default function Sidenavbar ({sidebar,setSidebar,closeSidebar}) {
   return( <>{ sidebar ?
       <div>
       <ul className="nav_bar" >

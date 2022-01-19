@@ -1,7 +1,7 @@
 import "../styles/src/Header.scss";
 import React,{useState} from "react";
 import openbutton from "../assets/img/tablet/nav_bar_tablet.png";
-import Modal from "../pages/Modal";
+import Sidenavbar from "../pages/Sidenavbar";
 import { Link } from "react-router-dom";
 
 
@@ -53,7 +53,7 @@ function Header() {
               </button>
             
           </div>
-          <Modal sidebar={sidebar} setSidebar={setSidebar}
+          <Sidenavbar sidebar={sidebar} setSidebar={setSidebar}
            closeSidebar={closeSidebar}/>
         
           
