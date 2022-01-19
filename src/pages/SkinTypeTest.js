@@ -688,7 +688,6 @@ function SkinTypeTest () {
             </div>
           </section>
         }
-        {/* {(analizeBtn === false) ? console.log("지금 상위컴포넌트 상태: ", analizeBtn) : console.log("지금 상위컴포넌트 상태: ", analizeBtn)} */}
 
         <div className="home_btn">
           <Link to="/">
@@ -699,7 +698,6 @@ function SkinTypeTest () {
 
       </div>
       <Footer />
-      {/* {console.log(testValues)} */}
     </>
   ) 
 }
