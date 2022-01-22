@@ -23,6 +23,7 @@ const mapStateToProps = (state) => {
 // testing 5
 // testing 6
 // testing 7
+// testing 8
 
 
 function MyCart () {
