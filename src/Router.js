@@ -13,7 +13,7 @@ import DrJartBestSellers from './pages/DrJartBestSellers';
 import InnisfreeBestSellers from './pages/InnisfreeBestSellers';
 import SeedmoolBestSellers from './pages/SeedmoolBestSellers';
 import BeplainBestSellers from './pages/BeplainBestSellers';
-import MyCart from './pages/MyCart';
+import MyCart from './pages/MyCart/MyCart';
 
 
 const Router = () => (
