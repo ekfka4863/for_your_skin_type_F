@@ -16,6 +16,9 @@ const mapStateToProps = (state) => {
 };
 
 
+// testing
+
+
 function MyCart () {
   return (
     <div id="wrap">
