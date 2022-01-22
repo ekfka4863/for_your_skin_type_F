@@ -16,14 +16,8 @@ const mapStateToProps = (state) => {
 };
 
 
-// testing
-// testing 2
-// testing 3
-// testing 4
-// testing 5
-// testing 6
-// testing 7
-// testing 8
+// 진짜 ... 왜 안돼닝..... 왜 잔디 안심어지니 ... ㅠ
+
 
 
 function MyCart () {
