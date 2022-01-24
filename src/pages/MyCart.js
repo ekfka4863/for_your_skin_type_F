@@ -8,8 +8,6 @@ import Card from "../components/Card";
 
 import "../styles/src/MyCart.scss";
 
-// redux & reducer 
-import { connect } from "react-redux";   // store에 있는 state 데이터를 꺼내기 위해 필요!
 
 
 

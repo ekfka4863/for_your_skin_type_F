@@ -11,7 +11,7 @@ import SkinTypeTest from "./pages/SkinTypeTest";
 
 import DrJartBestSellers from './pages/DrJartBestSellers';
 import InnisfreeBestSellers from './pages/InnisfreeBestSellers';
-import SeedmoolBestSellers from './pages/SeedmoolBestSellers';
+import SidmoolBestSellers from './pages/SidmoolBestSellers';
 import BeplainBestSellers from './pages/BeplainBestSellers';
 
 import MyCart from './pages/MyCart';
@@ -26,7 +26,7 @@ const Router = () => (
       <Route path="/" element={<Main />} />
       <Route path="/dr-jart-bestsellers" element={<DrJartBestSellers />} />
       <Route path="/innisfree-bestsellers" element={<InnisfreeBestSellers />} />
-      <Route path="/seedmool-bestsellers" element={<SeedmoolBestSellers />} />
+      <Route path="/sidmool-bestsellers" element={<SidmoolBestSellers />} />
       <Route path="/beplain-bestsellers" element={<BeplainBestSellers />} />
       <Route path="/skin-type-test" element={<SkinTypeTest />} />
       <Route path="/my-cart" element={<MyCart />} />

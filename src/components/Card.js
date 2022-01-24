@@ -6,7 +6,7 @@ import "../styles/src/Card.scss";
 
 export const brand1 = "drjart";
 export const brand2 = "innisfree";
-export const brand3 = "seedmool";
+export const brand3 = "sidmool";
 export const brand4 = "beplain";
 
 

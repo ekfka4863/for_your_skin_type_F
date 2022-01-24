@@ -199,8 +199,6 @@ const data = {     // 이거 겉에 감싸는거 객체로 !
         "itemFeature": "크림형",
         "skinType": "지성"
     },
-  ],
-  "innisfree": [
     {
         "name": "더메이크업 리쥬비네이팅 뷰티밤",
         "price": "30000",
@@ -223,6 +221,8 @@ const data = {     // 이거 겉에 감싸는거 객체로 !
         "itemFeature": "크림형",
         "skinType": "복합성"
     },  //여기까지 닥터자르트 20개
+  ],
+  "innisfree": [
     {
         "name": "레티놀 시카 흔적 앰플 30mL",
         "price": "40000",
@@ -444,7 +444,7 @@ const data = {     // 이거 겉에 감싸는거 객체로 !
         "skinType": "건성"
     }, //여기까지 이니스프리 20개
   ], 
-  "seedmool": [
+  "sidmool": [
     {
         "name": "아크바이™ 스킨 500ml",
         "price": "22600",

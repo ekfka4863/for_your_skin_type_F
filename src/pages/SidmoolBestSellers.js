@@ -11,7 +11,7 @@ import "../styles/src/BestSellers.scss";
 import dataObj from "../assets/data/data_renewed";
 import { brand3 } from '../components/Card';
 
-function SeedmoolBestSellers() {
+function SidmoolBestSellers() {
   let cardLen = 0;
   const skinTypes = []; 
   const itemNames = []; 
@@ -51,7 +51,7 @@ function SeedmoolBestSellers() {
       <Header />
       {/* <div className="test">시드물 베스트셀러 들어올 페이지!!</div> */}
       <div id="bestSellerBox">
-        <h2>Seedmool</h2>
+        <h2>Sidmool</h2>
         <h3>베스트셀러</h3>
         <div className="cards_area">
           <div className="cards_inner">
@@ -75,4 +75,4 @@ function SeedmoolBestSellers() {
 }
 
 
-export default SeedmoolBestSellers;
+export default SidmoolBestSellers;
