@@ -2,7 +2,7 @@ import * as actionTypes from "../MyCart/MyCart-types";
 
 export const addToCart = (itemID) => {
   return (
-    type: actionTypes.ADD_TO_CART,
+    type: "ADD_TO_CART",
     payload: {
       id: itemID
     }
