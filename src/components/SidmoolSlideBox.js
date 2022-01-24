@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "../styles/src/Main.scss";
 import BtnSlide from './BtnSlide';
 
-export default function SeedmoolSlideBox () {
+export default function SidmoolSlideBox () {
 
   const [slideindex, setSlideindex] = useState(1);
   // const numberRef = useRef(1);
@@ -49,7 +49,7 @@ const movepage = index => {
 
   return(
     <div className="slider">
-    <div className='Seedmool_slide' >
+    <div className='Sidmool_slide' >
       {Array.from({length: 5}).map((item,index)=>{
         return(
           <div key={item} className = { slideindex === index+1 ? "slide_anim" : "slide_none"}>

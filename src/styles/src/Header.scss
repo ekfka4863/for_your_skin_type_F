@@ -52,17 +52,85 @@
 
     .desktop_log_img{
       position: absolute;
-      right:130px; top:20px;
+      right:150px; top:20px;
       width:42px; height:42px;
       // filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.3));
     }
     .desktop_cart_img{
       position: absolute;
-      right:70px; top:20px;
+      right:97px; top:20px;
       width:42px; height:42px;
       // filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.3));
     }
+    
+    .desktop_home_img{
+      position: absolute;
+      right:40px; top:20px;
+      width:42px; height:42px;
+    }
   }
+}
+
+.LoginTap{
+  position: fixed;
+  display: flex;
+  text-align: center;
+  top:70px; right:70px;
+  width:170px;
+  height:50px;
+  background-color: rgb(216, 216, 216);
+  color:black;
+  border-radius: 15px;
+  li{
+    line-height:45px;
+    margin-left:23px;
+  }
+  .triangle{
+    position: fixed;
+    top:47px; right:155px;
+    z-index:999;
+    width:0px;height:0px;
+    border-top:15px solid transparent;
+    border-bottom:20px solid  rgb(216, 216, 216);
+    border-right: 15px solid transparent;
+    border-left: 15px solid transparent;
+  }
+}
+.triangle{
+  position: fixed;
+  top:45px; right:155px;
+  z-index:999;
+  width:0px;height:0px;
+  border-top:15px solid transparent;
+  border-bottom:20px solid  rgb(216, 216, 216);
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+
+.LogoutTap{
+  position: fixed;
+  display: flex;
+  text-align: center;
+  top:70px; right:70px;
+  width:170px;
+  height:50px;
+  background-color: rgb(216, 216, 216);
+  color:black;
+  border-radius: 15px;
+  li{
+    line-height:45px;
+    margin-left:13px;
+  }
+}
+.triangle{
+  position: fixed;
+  top:47px; right:155px;
+  z-index:999;
+  width:0px;height:0px;
+  border-top:15px solid transparent;
+  border-bottom:20px solid  rgb(216, 216, 216);
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
 }
 
 
@@ -169,6 +237,9 @@
     .desktop_cart_img{
       display: none;
     }
+    .desktop_home_img{
+      display: none;
+    }
   }
 };
 
@@ -266,6 +337,9 @@
       display: none;
     }
     .desktop_cart_img{
+      display: none;
+    }
+    .desktop_home_img{
       display: none;
     }
   }

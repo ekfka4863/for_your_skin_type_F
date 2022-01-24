@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 import "../styles/src/Main.scss";
 import DaJartSlideBox from "../components/DrJartSlideBox";
 import InnisfreeSlideBox from "../components/InnisfreeSlideBox";
-import SeedmoolSlideBox from "../components/SeedmoolSlideBox";
+import SidmoolSlideBox from "../components/SidmoolSlideBox";
 import BeplainSlideBox from "../components/BeplainSlideBox";
 
 
@@ -42,11 +42,11 @@ function Main () {
           </h3>
         <InnisfreeSlideBox />
         </section>
-        <section className="seedmool_box">
+        <section className="sidmool_box">
           <h3>
             <span className="blind">시드물 제품 보기</span>
           </h3>
-        <SeedmoolSlideBox/>
+        <SidmoolSlideBox/>
 
         </section>
         <section className="beplain_box">

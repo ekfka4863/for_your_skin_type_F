@@ -12,6 +12,7 @@ import "../styles/src/LoginSignup.scss";
 export default function LoginSignup() {
 
   const [tapbar, setTapbar] = useState(1);
+  
 
   const toggle = (index) =>{
     setTapbar(index)
