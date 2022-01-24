@@ -1,16 +1,20 @@
 import { useRef, useState } from "react";
-// import { useState } from "react";
 import "../styles/src/Card.scss";
 
-function Card () {
+// api / mockdata
+// import dataObj from "../assets/data/data_renewed";
 
-  // e.g. 
-  const itemName = "세라마이딘 엑토인 인퓨즈드";
-  const itemPrice = 68000;
+export const brand1 = "drjart";
+export const brand2 = "innisfree";
+export const brand3 = "seedmool";
+export const brand4 = "beplain";
+
+
+// function Card () {
+function Card ({ skinTypes, itemNames, itemPrices, itemFeatures, imageLink }) {
   const priceSign = "원";
-  const itemFeature = ["민감", "크림형"]; 
 
-
+  
   // let favoriteItemsCurr = useRef([]);
   
   let favoriteItemCurr = useRef(false);
@@ -30,10 +34,11 @@ function Card () {
   return (
     <div className="card">
       <div className="card_detail_part">
-        <div className="item_img"></div>
-        <div className="item_name">{itemName}</div>
-        <div className="item_price">{itemPrice + priceSign}</div>
-        <div className="item_feature">{itemFeature.map((e) => `#${e} `)}</div>
+        <div className="item_img" style={{backgroundImage: "url(" + `${imageLink}`+ ")"}}></div>
+        <div className="item_name">{itemNames}</div>
+        <div className="item_price">{itemPrices + priceSign}</div>
+        {/* <div className="item_feature">{skinTypes[0] + " " + itemFeatures.map((e) => `#${e} `)}</div> */}
+        <div className="item_feature">{`#${skinTypes} #${itemFeatures}`}</div>
       </div>
       <div className="card_cover_part">
         <button type="button" className="go_to_shopping_btn">
