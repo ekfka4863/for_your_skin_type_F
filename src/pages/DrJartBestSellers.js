@@ -7,7 +7,44 @@ import Card from "../components/Card";
 
 import "../styles/src/BestSellers.scss";
 
+// api / mock data 
+import dataObj from "../assets/data/data_renewed";
+import { brand1 } from '../components/Card';
+
 function DrJartBestSellers() {
+  let cardLen = 0;
+  const skinTypes = []; 
+  const itemNames = []; 
+  const itemPrices = []; 
+  const itemFeatures = []; 
+  const imageLink = []; 
+
+  dataObj[brand1].forEach((each) => {
+    skinTypes.push(each.skinType);
+    itemNames.push(each.name);
+    itemPrices.push(each.price);
+    itemFeatures.push(each.itemFeature);
+    imageLink.push(each.imageLink);
+    cardLen++;
+  });
+
+  // reference:  https://codingbroker.tistory.com/123
+  const renderItemCard = () => {
+    const result = [];
+    for (let i = 0; i < cardLen; i++) {
+      result.push(<Card 
+                    key={i} 
+                    skinTypes={skinTypes[i]} 
+                    itemNames={itemNames[i]}
+                    itemPrices={itemPrices[i]} 
+                    itemFeatures={itemFeatures[i]}
+                    imageLink={imageLink[i]}
+                  />
+      );            
+    }
+    return result;
+  };
+
   return (
     <div id="wrap">
       <Header />
@@ -18,12 +55,13 @@ function DrJartBestSellers() {
         <div className="cards_area">
           <div className="cards_inner">
             {/* 여기에 Card.js 컴포넌트!! */}
-            <Card /> 
-            <Card /> 
-            <Card /> 
-            <Card /> 
-            <Card /> 
-            <Card /> 
+            {/* <Card 
+              skinTypes={skinTypes[0]} 
+              itemNames={itemNames[0]}
+              itemPrices={itemPrices[0]} 
+              itemFeatures={itemFeatures[0]}
+            />  */}
+            {renderItemCard()}
           </div>
           <div className="cards_more_btn">
             <button type="button">+더보기</button>

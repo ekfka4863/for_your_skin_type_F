@@ -299,6 +299,11 @@ function SkinTypeTest () {
     skinTypeDetails(skinType);
   }
   
+  // +인기제품 더보기 버튼 클릭시 베스트셀러 페이지로 이동 
+  const onClickMoreCard = () => {
+    window.location.href= "/dr-jart-bestsellers"
+  };
+
 
   // 레이아웃 시작
   return (
@@ -653,7 +658,7 @@ function SkinTypeTest () {
               <Card />
             </div>
             <div className="test_result_more_btn">
-              <button type="button">&#43; 인기제품 더보기</button>
+              <button type="button" onClick={onClickMoreCard}>&#43; 인기제품 더보기</button>
             </div>
           </section>
         }
