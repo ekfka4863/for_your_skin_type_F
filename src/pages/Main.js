@@ -2,7 +2,6 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-import TestDiv from "../test";
 
 import { Link } from "react-router-dom";
 
@@ -18,7 +17,6 @@ function Main () {
   return (
     <>
       <Header />
-      <TestDiv />
       <section id="viewBox">
         <h2>
           <span className="blind">브랜드별 제품을 슬라이드로 소개합니다.</span>

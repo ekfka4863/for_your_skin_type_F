@@ -13,6 +13,8 @@ import DrJartBestSellers from './pages/DrJartBestSellers';
 import InnisfreeBestSellers from './pages/InnisfreeBestSellers';
 import SeedmoolBestSellers from './pages/SeedmoolBestSellers';
 import BeplainBestSellers from './pages/BeplainBestSellers';
+import MyCart from './pages/MyCart';
+import LoginSignup from './pages/LoginSignup';
 
 
 const Router = () => (
@@ -25,6 +27,8 @@ const Router = () => (
       <Route path="/seedmool-bestsellers" element={<SeedmoolBestSellers />} />
       <Route path="/beplain-bestsellers" element={<BeplainBestSellers />} />
       <Route path="/skin-type-test" element={<SkinTypeTest />} />
+      <Route path="/my-cart" element={<MyCart />} />
+      <Route path="/login-signup" element={<LoginSignup />} />
     </Routes>
   </BrowserRouter>
 );

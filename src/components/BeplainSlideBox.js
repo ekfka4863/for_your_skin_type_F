@@ -4,6 +4,7 @@ import BtnSlide from './BtnSlide';
 
 export default function BeplainSlideBox () {
 
+
   const [slideindex, setSlideindex] = useState(1);
   // const numberRef = useRef(1);
 

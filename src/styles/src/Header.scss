@@ -23,11 +23,12 @@
     .nav_bar_desktop {
       position: absolute;
       display: flex;
-      padding:0 100px;
-      width: 100%;
+      padding:0 10px;
+      width: 75%;
       justify-content: space-between;
       list-style: none;
       // background-color: red;
+      
       li {
         width: 200px;
         padding: 10px 15px;
@@ -47,6 +48,19 @@
           // background-color: #eea;
         }
       }
+    }
+
+    .desktop_log_img{
+      position: absolute;
+      right:130px; top:20px;
+      width:42px; height:42px;
+      // filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.3));
+    }
+    .desktop_cart_img{
+      position: absolute;
+      right:70px; top:20px;
+      width:42px; height:42px;
+      // filter: drop-shadow(15px 15px 4px rgba(0, 0, 0, 0.3));
     }
   }
 }
@@ -72,25 +86,37 @@
       }
       .nav_open_btn {
         display: block;
-        position:absolute;
-        top:11%; right:5%;
 
-        img{
-          left:0; top:0;
+        .openbutton{
+          position:absolute;
           width: 60px;
           height: 60px;
+          top:11%; right:5%;
           }
+        .log_img{
+          position: absolute;
+          left:20px; top:15px;
+          width:40px; height:40px;
+
+        }
+        .cart_img{
+          position: absolute;
+          width:40px; height:40px;
+          left:70px; top:15px;
+        }
+
         }
       // 모달창
       .nav_bar{
         position: absolute;
         z-index: 99999;
 
-        button{
+        .close_button{
           img{
             position:absolute;
             margin:0 auto;
-            top:7%; left:46%;
+            width:50px; height: 50px;
+            top:7%; left:47.5%;
           }
         }
           
@@ -137,6 +163,12 @@
       
       }
     }
+    .desktop_log_img{
+      display: none;
+    }
+    .desktop_cart_img{
+      display: none;
+    }
   }
 };
 
@@ -156,28 +188,41 @@
       .nav_open_btn {
         display: block;
         position:absolute;
-        top:40%; left:20%;
-        img{
+        top:40%; left:22%;
+        .openbutton{
           left:0; top:0;
           width: 60px;
           height: 60px;
+          }
+          .log_img{
+            position: absolute;
+            bottom:-250px; left:13px;
+            width:43px; height:43px;
+          }
+          .cart_img{
+            position: absolute;
+            bottom:-310px; left:10px;
+            width:43px; height: 43px;
           }
         }
       // 모달창
       .nav_bar{
         position: fixed;
-       z-index: 99999;
+        z-index: 99999;
 
-        button{
-          img{
+   
+          .close_button{
             position:absolute;
-            top:30px; left:100px;
+            top:40px; left:105px;
+            img{
+            width:50px; height: 50px;
+            }
           }
-        }
+        
           
         .home_img{
           position:absolute;
-          top:120px; left:5px;
+          top:130px; left:100px;
         }
 
         padding-top:200px;
@@ -216,6 +261,12 @@
           }
         }
       }
+    }
+    .desktop_log_img{
+      display: none;
+    }
+    .desktop_cart_img{
+      display: none;
     }
   }
 };

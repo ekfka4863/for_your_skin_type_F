@@ -2,6 +2,8 @@ import "../styles/src/Header.scss";
 import React,{useState} from "react";
 import openbutton from "../assets/img/tablet/nav_bar_tablet.png";
 import Sidenavbar from "../pages/Sidenavbar";
+import user from "../assets/img/tablet/user.png";
+import cart from "../assets/img/tablet/cart.png";
 import { Link } from "react-router-dom";
 
 
@@ -44,13 +46,25 @@ function Header() {
             <li>
               <Link to="/beplain-bestsellers">Beplain</Link>  
             </li>
-          </ul>
+            </ul>
+            <Link to="/login-signup">
+                <span><img src={user} alt="로그인이미지" className="desktop_log_img"></img></span>
+            </Link>
+            
+            <img src={cart} alt="장바구니이미지" className="desktop_cart_img"></img>
+    
 
           <div className="nav_open_btn">
               <button onClick={openSidebar}>
               <span className="blind">메뉴바 열기버튼</span>
-              <img src={openbutton} alt="메뉴 열기 버튼" ></img>
+              <img className="openbutton"src={openbutton} alt="메뉴 열기 버튼" ></img>
               </button>
+              <Link to="/login-signup">
+                <span><img src={user} alt="로그인이미지" className="log_img"></img></span>
+            </Link>
+            
+              <img src={cart} alt="장바구니이미지" className="cart_img"></img>
+            
             
           </div>
           <Sidenavbar sidebar={sidebar} setSidebar={setSidebar}

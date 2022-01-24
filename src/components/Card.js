@@ -1,4 +1,5 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
+// import { useState } from "react";
 import "../styles/src/Card.scss";
 
 function Card () {
@@ -9,11 +10,22 @@ function Card () {
   const priceSign = "원";
   const itemFeature = ["민감", "크림형"]; 
 
-  const divRef = useRef();
 
-  // const focusFn = (e) => {
-  //   divRef.current.focus();
-  // };
+  // let favoriteItemsCurr = useRef([]);
+  
+  let favoriteItemCurr = useRef(false);
+  const [favoriteItem, setFavoriteItem] = useState(favoriteItemCurr.current);
+
+  const onClickFavorite = () => {
+    favoriteItemCurr.current = !favoriteItemCurr.current;
+    setFavoriteItem(favoriteItemCurr.current);
+
+    // favoriteItemsCurr.push(______); // 해당 카드 컴포넌트 api 데이터 넣어주기 ...!?
+
+    // console.log("button clicked!!", favoriteItemCurr.current);
+    // console.log(document.querySelector(".to_favorite_item"));
+    // console.log(favoriteItem);
+  };
 
   return (
     <div className="card">
@@ -25,9 +37,11 @@ function Card () {
       </div>
       <div className="card_cover_part">
         <button type="button" className="go_to_shopping_btn">
+        {/* <button type="button" className="go_to_shopping_btn" onClick={location.href = {}}> */}
           <span className="cart_icon"></span>
           <span>바로구매</span>
         </button>
+        <button onClick={onClickFavorite} className={(favoriteItem === false) ? "to_favorite_item" : "to_favorite_item in_cart"}></button>
       </div>
     </div>
   )
