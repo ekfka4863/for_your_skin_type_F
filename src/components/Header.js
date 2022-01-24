@@ -41,7 +41,7 @@ function Header() {
               <Link to="/innisfree-bestsellers">Innisfree</Link>
             </li>
             <li>
-              <Link to="/seedmool-bestsellers">Seedmool</Link>
+              <Link to="/sidmool-bestsellers">Sidmool</Link>
             </li>
             <li>
               <Link to="/beplain-bestsellers">Beplain</Link>  
