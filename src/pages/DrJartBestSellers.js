@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 // 공통 컴포넌트 임포트 
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -11,6 +13,7 @@ import "../styles/src/BestSellers.scss";
 import dataObj from "../assets/data/data_renewed";
 import { brand1 } from '../components/Card';
 
+
 function DrJartBestSellers() {
   let cardLen = 0;
   const skinTypes = []; 
@@ -18,6 +21,7 @@ function DrJartBestSellers() {
   const itemPrices = []; 
   const itemFeatures = []; 
   const imageLink = []; 
+  const productLink = []; 
 
   dataObj[brand1].forEach((each) => {
     skinTypes.push(each.skinType);
@@ -25,13 +29,16 @@ function DrJartBestSellers() {
     itemPrices.push(each.price);
     itemFeatures.push(each.itemFeature);
     imageLink.push(each.imageLink);
+    productLink.push(each.productLink);
     cardLen++;
   });
+
+  const [cardController, setCardController] = useState(6);
 
   // reference:  https://codingbroker.tistory.com/123
   const renderItemCard = () => {
     const result = [];
-    for (let i = 0; i < cardLen; i++) {
+    for (let i = 0; i < cardController; i++) {
       result.push(<Card 
                     key={i} 
                     skinTypes={skinTypes[i]} 
@@ -39,11 +46,21 @@ function DrJartBestSellers() {
                     itemPrices={itemPrices[i]} 
                     itemFeatures={itemFeatures[i]}
                     imageLink={imageLink[i]}
+                    productLink={productLink[i]}
                   />
       );            
     }
     return result;
   };
+
+  const onClickShowMoreCards = () => {
+    if (cardController <= cardLen - 6) {
+      setCardController(cardController + 6);
+    } else {
+      setCardController(cardLen);
+    }
+  };
+
 
   return (
     <div id="wrap">
@@ -55,16 +72,10 @@ function DrJartBestSellers() {
         <div className="cards_area">
           <div className="cards_inner">
             {/* 여기에 Card.js 컴포넌트!! */}
-            {/* <Card 
-              skinTypes={skinTypes[0]} 
-              itemNames={itemNames[0]}
-              itemPrices={itemPrices[0]} 
-              itemFeatures={itemFeatures[0]}
-            />  */}
             {renderItemCard()}
           </div>
           <div className="cards_more_btn">
-            <button type="button">+더보기</button>
+            <button type="button" onClick={onClickShowMoreCards}>+더보기</button>
           </div>
         </div>
       </div>
