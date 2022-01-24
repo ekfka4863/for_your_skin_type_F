@@ -7,8 +7,9 @@ import Card from "../../components/Card";
 import "../../styles/src/MyCart.scss";
 
 // redux & reducer 
-import { connect } from "react-redux";
+import { connect } from "react-redux";   // store에 있는 state 데이터를 꺼내기 위해 필요!
 
+// store에 있는 state 데이터를 꺼내기 위해 필요한 함수
 const mapStateToProps = (state) => {
   return (
     myCart: state.cart.myCart,
@@ -16,11 +17,9 @@ const mapStateToProps = (state) => {
 };
 
 
-// 진짜 ... 왜 안돼닝..... 왜 잔디 안심어지니 ... ㅠ
-// 다시 츄롸이츄롸이...
 
 
-
+// 진짜 컴포넌트 
 function MyCart () {
   return (
     <div id="wrap">
@@ -51,7 +50,8 @@ function MyCart () {
   )
 }
 
-export default connect(mapStateToProps)(MyCart);
-
+export default connect(mapStateToProps)(MyCart);   // 이렇게 작성 필수!
+// https://velog.io/@ksung1889/%EC%8B%A4%EB%AC%B4-React-3.%EC%84%B8%EA%B3%84%EC%B5%9C%EA%B3%A0%EB%A1%9C-%EC%89%AC%EC%9A%B4-Redux-1-props-%EC%8B%AB%EC%9C%BC%EB%A9%B4-%EC%93%B0%EC%84%B8%EC%9A%94
+// https://www.youtube.com/watch?v=MNs_7avLIJ4
 
 
