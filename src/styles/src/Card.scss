@@ -12,11 +12,15 @@
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.25);
   border-radius: 5px;
   .card_detail_part {
+    // transition: all ease 1s;
     .item_img {
       height: 200px;
       margin: auto;
       margin-bottom: 15px;
-      background-color: #ddd;
+      // background-color: #ddd;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
     }
     .item_name {
       height: auto;
@@ -49,14 +53,18 @@
       // background-color: #ea1;
     }
   }
-  .card_detail_part:hover + .card_cover_part {
-    display: block;
+  .card_cover_part:hover {
+    // transform: scale(1.015);
+    transition: 1s;
+    opacity: 1;
   }
-  .card_detail_part:focus + .card_cover_part {
-    display: block;
+  .card_cover_part:focus {
+    transition: 1s;
+    opacity: 1;
   }
   .card_cover_part {
-    display: none;
+    opacity: 0;
+    transition: all ease 1s;
 
     position: absolute;
     top: 50%;
@@ -206,3 +214,5 @@
     }
   }
 }
+
+

@@ -53,7 +53,7 @@ const movepage = index => {
       {Array.from({length: 5}).map((item,index)=>{
         return(
           <div key={item} className = { slideindex === index+1 ? "slide_anim" : "slide_none"}>
-              <img src={process.env.PUBLIC_URL + `/img/Seedmool_slide${index+1}.jpg`} alt='Seedmool_slide_imgs'></img>
+              <img src={process.env.PUBLIC_URL + `/img/Sidmool_slide${index+1}.jpg`} alt='Sidmool_slide_imgs'></img>
           </div>
 
           

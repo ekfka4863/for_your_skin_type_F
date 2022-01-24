@@ -1,20 +1,20 @@
 import { useRef, useState } from "react";
 import "../styles/src/Card.scss";
 
-// api / mockdata
-// import dataObj from "../assets/data/data_renewed";
 
 export const brand1 = "drjart";
 export const brand2 = "innisfree";
-export const brand3 = "seedmool";
+export const brand3 = "sidmool";
 export const brand4 = "beplain";
 
 
 // function Card () {
-function Card ({ skinTypes, itemNames, itemPrices, itemFeatures, imageLink }) {
+function Card ({ skinTypes, itemNames, itemPrices, itemFeatures, imageLink, productLink }) {
   const priceSign = "원";
 
-  
+  const goToBuyProduct = () => {
+    window.location = `${productLink}`;
+  };
   // let favoriteItemsCurr = useRef([]);
   
   let favoriteItemCurr = useRef(false);
@@ -41,7 +41,7 @@ function Card ({ skinTypes, itemNames, itemPrices, itemFeatures, imageLink }) {
         <div className="item_feature">{`#${skinTypes} #${itemFeatures}`}</div>
       </div>
       <div className="card_cover_part">
-        <button type="button" className="go_to_shopping_btn">
+        <button type="button" className="go_to_shopping_btn" onClick={goToBuyProduct} >
         {/* <button type="button" className="go_to_shopping_btn" onClick={location.href = {}}> */}
           <span className="cart_icon"></span>
           <span>바로구매</span>
