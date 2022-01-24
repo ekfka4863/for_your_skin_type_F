@@ -1,10 +1,19 @@
 // 공통 컴포넌트 임포트 
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../../components/Header";
+import Footer from "../../components/Footer";
 
-import Card from "../components/Card";
+import Card from "../../components/Card";
 
-import "../styles/src/MyCart.scss";
+import "../../styles/src/MyCart.scss";
+
+// redux & reducer 
+import { connect } from "react-redux";
+
+const mapStateToProps = (state) => {
+  return (
+    myCart: state.cart.myCart,
+  )
+};
 
 
 function MyCart () {
@@ -37,4 +46,7 @@ function MyCart () {
   )
 }
 
-export default MyCart;
+export default connect(mapStateToProps)(MyCart);
+
+
+
