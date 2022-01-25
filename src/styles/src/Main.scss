@@ -186,13 +186,25 @@
     line-height: 110px;
 
     button {
+      width: 100%;
+      // background-color: #31a;
       a {
+        transition: all 0.5s ease-in-out;
+
+        display: block;
+        width: 100%;
+        height: 100%;
         color: $white;
-        font-weight: 900;
+        font-weight: 800;
         font-size: 30px;
+        line-height: 100px;
+        // background-color: #fff;
       }
     }
   }// 테스트 버튼
+  .skin_type_test_btn:hover a {
+    transform: scale(1.1);
+  }
 }
 
 
