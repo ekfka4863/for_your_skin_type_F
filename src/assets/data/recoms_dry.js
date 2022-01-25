@@ -1,4 +1,4 @@
-const recoms_dry = [
+export const recoms_dry = [
   {
     "name": "시카페어 카밍 젤 크림",
     "price": "35000",
