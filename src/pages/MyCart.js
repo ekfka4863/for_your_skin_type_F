@@ -10,11 +10,19 @@ import "../styles/src/MyCart.scss";
 
 
 
-
 // 진짜 컴포넌트 
 function MyCart () {
-  // const [myFavorites, setMyFavorites] = useState([]); 
+  let myFavoriteItems = [];
+
+  const [myFavoritesNum, setMyFavoritesNum] = useState(0); 
   
+  const addFavoriteItems = () => {
+    setMyFavoritesNum(myFavoritesNum++);
+  };
+  const removeFavoriteItems = () => {
+    setMyFavoritesNum(myFavoritesNum--);
+  };
+
   
   return (
     <div id="wrap">
@@ -25,13 +33,21 @@ function MyCart () {
         <div className="favorite_items_total_num">
           <h3>장바구니</h3>
           {/* <div className="total_num">Total: {___} item(s)</div> */}
-          <div className="total_num">Total: 7 item(s)</div>
+          <div className="total_num">Total: {myFavoritesNum} item(s)</div>
         </div>
         <div className="favorite_items_area">
           {/* 여기에 Card.js 컴포넌트!! 
             -> 만약 Card 컴포넌트가 하나도 없으면 "장바구니가 비어있습니다."라고 나타내기!? 
           */}
-          <Card />
+          {
+            (myFavoritesNum === 0) 
+              ? 
+            <div className="empty_cart">장바구니가 비어있습니다</div>
+              : 
+              // renderItemCard()
+            // <Card />
+            <Card />
+          }
         </div>
       </div>
       <Footer />

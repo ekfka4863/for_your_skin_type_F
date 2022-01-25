@@ -1,4 +1,4 @@
-const recoms_oily = [
+export  const recoms_oily = [
   {
     "name": "시카페어 크림 (호랑이의해 코스터증정)",
     "price": "48000",
