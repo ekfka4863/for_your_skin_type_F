@@ -40,13 +40,14 @@ function Header() {
 
           <ul className="nav_bar_desktop" >
             <li>
-              <Link to="/dr-jart-bestsellers">Dr.Jart</Link>
+              <Link to="/dr-jart-bestsellers">Dr.Jart
+              </Link> 
             </li>
             <li>
               <Link to="/innisfree-bestsellers">Innisfree</Link>
             </li>
             <li>
-              <Link to="/sidmool-bestsellers">Sidmool</Link>
+              <Link to="/sidmool-bestsellers">Sidmool</Link>    
             </li>
             <li>
               <Link to="/beplain-bestsellers">Beplain</Link>  
@@ -66,7 +67,7 @@ function Header() {
                 </button>
             </Link>
 
-            { Login ? <LoginTap/> : <LogoutTap/> }
+            {/* { Login ? <LoginTap/> : <LogoutTap/> } */}
             </div>
 
             <Link to="/my-cart">
@@ -101,30 +102,30 @@ function Header() {
   )
 }
 
-function LoginTap() {
-  return(
-    <div>
-      <div className="triangle"></div>
-      <ul className="LoginTap">
-        <li>로그인</li>
-        <li>회원가입</li>
-      </ul>
-    </div>
-  )
+// function LoginTap() {
+//   return(
+//     <div>
+//       <div className="triangle"></div>
+//       <ul className="LoginTap">
+//         <li>로그인</li>
+//         <li>회원가입</li>
+//       </ul>
+//     </div>
+//   )
   
-}
-function LogoutTap() {
-  return(
-    <div>
-      <div className="triangle"></div>
-      <ul className="LogoutTap">
-        <li>로그아웃</li>
-        <li>마이페이지</li>
-      </ul>
-    </div>
-  )
+// }
+// function LogoutTap() {
+//   return(
+//     <div>
+//       <div className="triangle"></div>
+//       <ul className="LogoutTap">
+//         <li>로그아웃</li>
+//         <li>마이페이지</li>
+//       </ul>
+//     </div>
+//   )
   
-}
+// }
 
 
 export default Header;           
