@@ -1,12 +1,18 @@
 @import "../common/mixin";
 
+div.empty_cart {
+  margin: 30px auto 0;
+  font-weight: 400;
+  color: #666;
+}
 
+// ======================
 #wrap {
   padding: 0;
   margin: 0;
 }
 
-
+// ======================
 /* laptop, desktop */ 
 #myCartBox {
   width: auto;
@@ -101,7 +107,7 @@
   #myCartBox {
     .favorite_items_total_num {
       h3 {
-        font-size: 20px;
+        font-size: 26px;
         padding: 100px 0 70px 0;
         // background-color: #ea1;
       }

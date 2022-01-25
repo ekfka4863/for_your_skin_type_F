@@ -58,6 +58,10 @@ function SidmoolBestSellers() {
     } else {
       setCardController(cardLen);
     }
+
+    if (cardController === cardLen) {
+      alert("더 많은 제품을 보시려면 해당 화장품 브랜드 사이트를 방문해주십시오. 감사합니다!");
+    } 
   };
 
   return (

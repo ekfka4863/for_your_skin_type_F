@@ -37,8 +37,8 @@ function Card ({ skinTypes, itemNames, itemPrices, itemFeatures, imageLink, prod
         <div className="item_img" style={{backgroundImage: "url(" + `${imageLink}`+ ")"}}></div>
         <div className="item_name">{itemNames}</div>
         <div className="item_price">{itemPrices + priceSign}</div>
-        {/* <div className="item_feature">{skinTypes[0] + " " + itemFeatures.map((e) => `#${e} `)}</div> */}
-        <div className="item_feature">{`#${skinTypes} #${itemFeatures}`}</div>
+        {/* <div className="item_feature">{`#${skinTypes}`} {(itemFeatures !== "상관없음") ? `#${itemFeatures}` : null}</div> */}
+        <div className="item_feature">{`#${skinTypes}`} {(itemFeatures !== "상관없음") ? `#${itemFeatures}` : `#멀티제형`}</div>
       </div>
       <div className="card_cover_part">
         <button type="button" className="go_to_shopping_btn" onClick={goToBuyProduct} >

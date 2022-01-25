@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 // 공통 컴포넌트 임포트 
 import Header from "../components/Header";
@@ -18,11 +18,17 @@ function MyCart () {
   
   const addFavoriteItems = () => {
     setMyFavoritesNum(myFavoritesNum++);
+    myFavoriteItems.push({
+      // 카드에 들어갈 정보 담기...
+    });
   };
   const removeFavoriteItems = () => {
     setMyFavoritesNum(myFavoritesNum--);
   };
 
+  // useEffect(() => {
+  //   // renderItemCard()
+  // }, []);
   
   return (
     <div id="wrap">
@@ -55,9 +61,7 @@ function MyCart () {
   )
 }
 
-// export default connect(mapStateToProps)(MyCart);   // 이렇게 작성 필수!
+
 export default MyCart;  
-// https://velog.io/@ksung1889/%EC%8B%A4%EB%AC%B4-React-3.%EC%84%B8%EA%B3%84%EC%B5%9C%EA%B3%A0%EB%A1%9C-%EC%89%AC%EC%9A%B4-Redux-1-props-%EC%8B%AB%EC%9C%BC%EB%A9%B4-%EC%93%B0%EC%84%B8%EC%9A%94
-// https://www.youtube.com/watch?v=MNs_7avLIJ4
 
 
