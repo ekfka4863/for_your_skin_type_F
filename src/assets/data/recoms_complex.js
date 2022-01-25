@@ -1,4 +1,4 @@
-const recoms_complex = [
+export const recoms_complex = [
   {
     "name": "[Year OF TIGER] 시카페어 슬리페어 앰플인마스크 30ml",
     "price": "15000",

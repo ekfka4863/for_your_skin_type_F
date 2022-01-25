@@ -1,4 +1,4 @@
-const recoms_sensitive = [
+export const recoms_sensitive = [
   {
     "id": "1",   
     "name": "세라마이딘™ 엑토인 인퓨즈드 크림",
