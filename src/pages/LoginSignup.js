@@ -6,8 +6,29 @@ import Footer from "../components/Footer";
 
 import "../styles/src/LoginSignup.scss";
 
-// import {Idimg} from "../assets/img/laptop/user_email.png";
-// import {Pwimg} from "../assets/img/laptop/user_pw.png";
+import axios from "axios";
+
+axios.defaults.baseURL = "";
+axios.defaults.withCredentials = true;
+
+// onLogin = (email, password) => {
+// 	const data = {
+// 		email,
+// 		password,
+// 	};
+// 	axios.post('/login', data).then(response => {
+// 		const { accessToken } = response.data;
+
+// 		// API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
+// 		axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+
+// 		// accessToken을 localStorage, cookie 등에 저장하지 않는다!
+
+// 	}).catch(error => {
+// 		// ... 에러 처리
+// 	});
+// }
+
 
 export default function LoginSignup() {
 
@@ -54,7 +75,6 @@ export default function LoginSignup() {
         </div>
       </form>
       </div>
-      {/* 로그인박스 */}
       
 
       {/* 회원가입박스 */}
