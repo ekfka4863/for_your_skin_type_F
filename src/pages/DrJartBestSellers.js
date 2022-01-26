@@ -4,7 +4,6 @@ import { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-// import { Link } from "react-router-dom";
 import Card from "../components/Card";
 
 import "../styles/src/BestSellers.scss";
@@ -59,13 +58,16 @@ function DrJartBestSellers() {
     } else {
       setCardController(cardLen);
     }
+
+    if (cardController === cardLen) {
+      alert("더 많은 제품을 보시려면 해당 화장품 브랜드 사이트를 방문해주십시오. 감사합니다!");
+    } 
   };
 
 
   return (
     <div id="wrap">
       <Header />
-      {/* <div className="test">닥터자르트 베스트셀러 들어올 페이지!!</div> */}
       <div id="bestSellerBox">
         <h2>Dr.Jart</h2>
         <h3>베스트셀러</h3>
