@@ -1,6 +1,7 @@
 @import "../common/mixin";
 
 #LoginSignup_wrap{
+  // display: none;
   position: relative;
   width:100vw;
   height:100vh;
@@ -18,12 +19,13 @@
   .taps{
     display: flex;
     position: absolute;
-    top:0%; left:28%;
+    top:1%; left:28%;
     z-index: 99;
-
+ 
+   
   .tap_active{
     width:150px; 
-    height:70px;
+    height:65px;
     background-color:$dark-gray;
     border-top-right-radius:15px;
     border-top-left-radius:15px;
@@ -34,7 +36,7 @@
 
     .tap_none{
     width:150px;
-    height:70px;
+    height:65px;
     background-color:rgb(236, 236, 236);
     border-top-right-radius:15px;
     border-top-left-radius:15px;
@@ -43,6 +45,10 @@
     font:20px/65px "나눔고딕",sans-serif;
     cursor: pointer;
   }
+    .tap_none:hover{
+    font-size:25px;
+    transition: all 0.5s ease-in-out;
+    }
   }
 
   .Login_box{
@@ -52,7 +58,7 @@
     height:500px;
     box-sizing: border-box;
     background-color:rgb(236, 236, 236);
-    border-radius:15px;
+    border-radius:10px;
 
     form{
       padding-top:90px;
@@ -66,7 +72,7 @@
         background-color:rgb(156, 156, 156);
         display: flex;
         margin-bottom: 20px;
-        border-radius:15px;
+        border-radius:10px;
         img{
           margin-left: 20px;
         }
@@ -90,7 +96,7 @@
         height: 100px;
         background-color:rgb(156, 156, 156);
         display: flex;
-        border-radius:15px;
+        border-radius:10px;
         img{
           margin-left:10px;
         }
@@ -142,7 +148,7 @@
     height:500px;
     box-sizing: border-box;
     background-color:rgb(236, 236, 236);
-    border-radius:15px;
+    border-radius:10px;
 
     form{
       padding-top:50px;
@@ -304,14 +310,14 @@
   .taps{
     display: flex;
     position: absolute;
-    top:30px; 
+    top:35px; 
     width:380px; height:70px;
     left:29%;
     z-index: 99;
 
   .tap_active{
     width:140px; 
-    height:70px;
+    height:65px;
     background-color:$dark-gray;
     border-top-right-radius:15px;
     border-top-left-radius:15px;
@@ -322,7 +328,7 @@
 
     .tap_none{
     width:140px;
-    height:70px;
+    height:65px;
     background-color:rgb(236, 236, 236);
     border-top-right-radius:15px;
     border-top-left-radius:15px;
@@ -331,6 +337,10 @@
     font:20px/65px "나눔고딕",sans-serif;
     cursor: pointer;
   }
+  .tap_none:hover{
+    font-size:25px;
+    transition: all 0.5s ease-in-out;
+    }
   }
 
   .Login_box{
@@ -342,7 +352,7 @@
     margin:0 auto;
     box-sizing: border-box;
     background-color:rgb(236, 236, 236);
-    border-radius:15px;
+    border-radius:10px;
 
     form{
       padding-top:90px;
@@ -383,7 +393,7 @@
         height:70px;
         background-color:rgb(156, 156, 156);
         display: flex;
-        border-radius:15px;
+        border-radius:10px;
         img{
           width:45px;
           height:45px;
@@ -610,12 +620,12 @@
     .taps{
       display: flex;
       position: absolute;
-      top:0%; left:23%;
+      top:1%; left:23%;
       z-index: 99;
   
     .tap_active{
       width:150px; 
-      height:70px;
+      height:65px;
       background-color:$dark-gray;
       border-top-right-radius:15px;
       border-top-left-radius:15px;
@@ -623,10 +633,13 @@
       font:20px/65px "나눔고딕",sans-serif;
       color: #fff;
       }
+      // .tap_active:hover{
+      //   font-size: 25px;
+      // }
   
       .tap_none{
       width:150px;
-      height:70px;
+      height:65px;
       background-color:rgb(236, 236, 236);
       border-top-right-radius:15px;
       border-top-left-radius:15px;
@@ -635,16 +648,20 @@
       font:20px/65px "나눔고딕",sans-serif;
       cursor: pointer;
     }
+    .tap_none:hover{
+      font-size:25px;
+      transition: all 0.5s ease-in-out;
+      }
     }
   
     .Login_box{
       position: absolute;
       top:12.3%; left:22%;
-      width:650px;
+      width:570px;
       height:500px;
       box-sizing: border-box;
       background-color:rgb(236, 236, 236);
-      border-radius:15px;
+      border-radius:10px;
   
       form{
         padding-top:90px;
@@ -658,7 +675,7 @@
           background-color:rgb(156, 156, 156);
           display: flex;
           margin-bottom: 20px;
-          border-radius:15px;
+          border-radius:10px;
           img{
             margin-left: 20px;
           }
@@ -682,7 +699,7 @@
           height: 100px;
           background-color:rgb(156, 156, 156);
           display: flex;
-          border-radius:15px;
+          border-radius:10px;
           img{
             margin-left:10px;
           }
@@ -730,7 +747,7 @@
     .Signup_box{
       position: absolute;
       top:12.3%; left:22%;
-      width:650px;
+      width:570px;
       height:500px;
       box-sizing: border-box;
       background-color:rgb(236, 236, 236);
@@ -738,12 +755,12 @@
   
       form{
         padding-top:50px;
-        width:570px;
+        width:550px;
         margin:0 auto;
-        // height:600px;
   
         .first_bundle{
           display: flex;
+          margin-left: 10px;
           li{
             position: relative;
             width:260px;
@@ -815,11 +832,12 @@
           position: relative;
   
           li{
-            width:570px;
+            width:540px;
             height:70px;
             background-color:rgb(156, 156, 156);
             border-radius: 15px;
             margin-top: 20px;
+            margin-left:10px;
   
           }
   
@@ -853,6 +871,7 @@
         .signup_button{
           float: right;
           margin-top: 15px;
+          margin-right:10px;
           input{
           width:100px;
           height:50px;
