@@ -17,7 +17,7 @@ import go_to_test_btn from "../assets/img/laptop/go_to_test_btn.png";
 
 
 
-
+// 임의의 사용자 아이디 - 나중에 지우기!
 const userId = "박다람";
 
 export default function LoginSignup() {
