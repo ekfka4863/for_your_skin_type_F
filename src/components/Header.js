@@ -117,7 +117,7 @@ function Header() {
           </li>
           <li onClick={()=> {
                     setLogin(!Login); }}>
-            {(!Login) ?  <Link to="/login-signup">회원가입</Link> :   <Link to="/test-mypage"> 마이페이지 </Link>}
+            {(!Login) ?  <Link to="/login-signup">회원가입</Link> :   <Link to="/my-page"> 마이페이지 </Link>}
           </li>
         </ul>
       </div>

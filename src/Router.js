@@ -16,7 +16,7 @@ import BeplainBestSellers from './pages/BeplainBestSellers';
 
 import MyCart from './pages/MyCart';
 import LoginSignup from './pages/LoginSignup';
-import Testmypage from './components/Testmypage';
+import MyPage from './components/MyPage';
 
 
 
@@ -32,7 +32,7 @@ const Router = () => (
       <Route path="/skin-type-test" element={<SkinTypeTest />} />
       <Route path="/my-cart" element={<MyCart />} />
       <Route path="/login-signup" element={<LoginSignup />} />
-      <Route path="/test-mypage" element={<Testmypage />} />
+      <Route path="/my-page" element={<MyPage />} />
     </Routes>
   </BrowserRouter>
 );

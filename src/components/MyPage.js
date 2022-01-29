@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 import "../styles/src/Mypage.scss"
 
-export default function Testmypage() {
+export default function MyPage() {
   return (
   <>
     <Header />
@@ -13,7 +13,7 @@ export default function Testmypage() {
         <h1>마이페이지</h1>
 
         <form>
-         
+        
           <div className='first_box'>
           <ul> 
           <li className='name'><img src={require('../assets/img/laptop/user_name.png')} alt="이름이미지"></img></li>
