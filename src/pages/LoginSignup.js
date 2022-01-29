@@ -6,38 +6,21 @@ import Footer from "../components/Footer";
 
 import "../styles/src/LoginSignup.scss";
 
-import axios from "axios";
 
-axios.defaults.baseURL = "";
-axios.defaults.withCredentials = true;
-
-// onLogin = (email, password) => {
-// 	const data = {
-// 		email,
-// 		password,
-// 	};
-// 	axios.post('/login', data).then(response => {
-// 		const { accessToken } = response.data;
-
-// 		// API 요청하는 콜마다 헤더에 accessToken 담아 보내도록 설정
-// 		axios.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
-
-// 		// accessToken을 localStorage, cookie 등에 저장하지 않는다!
-
-// 	}).catch(error => {
-// 		// ... 에러 처리
-// 	});
-// }
 
 
 export default function LoginSignup() {
 
   const [tapbar, setTapbar] = useState(1);
+
+
   
 
   const toggle = (index) =>{
     setTapbar(index)
   }
+
+
 
   return(
     <>
@@ -80,7 +63,7 @@ export default function LoginSignup() {
       {/* 회원가입박스 */}
       <div className={ tapbar === 2? 'Signup_box' : 'Content_none'} onClick={() => {toggle(2)}}>
 
-        <form>
+        <form action="#">
         <ul className="first_bundle">
             <li className="Name_box">
                 <img src={require('../assets/img/laptop/user_name.png')} alt="비밀번호 이미지"></img>
@@ -115,9 +98,9 @@ export default function LoginSignup() {
 
             <li className="signup_tel_box">
             <img src={require('../assets/img/laptop/phone.png')} alt="전화번호 이미지"></img>
-            <input type="tel" id="userTel" placeholder="전화번호" required></input>
+            <input type="tel" id="userTel" placeholder="전화번호" required maxlength="11"></input>
             <label for="userTel"></label></li>
-          </ul>
+          </ul> 
 
           <div className="signup_button">
             <input type="submit" value="회원가입"></input>
