@@ -10,9 +10,10 @@ import home_img from "../assets/img/tablet/home_tablet.png";
 
 
 function Header() {
- 
+
   const [sidebar, setSidebar] = useState(false);
-  const [Login, setLogin] = useState(false);
+  // const [loggedIn, setLoggedIn] = useState(true);
+  const [loggedIn, setLoggedIn] = useState(false);
   const [clicktap, setClicktap] = useState(false);
 
 
@@ -65,7 +66,6 @@ function Header() {
               {/* <Link to="/test-mypage"> */}
                   <button onClick={()=> {
                     setClicktap(!clicktap); }}> 
-             
                   <span><img src={user} alt="로그인이미지" className="desktop_log_img"></img></span>
                   </button>
               </Link>
@@ -109,16 +109,22 @@ function Header() {
     return(
       <div className="LoginTapWrapper">
         <ul className={(!clicktap) ? "LoginTap_none" : "LoginTap" }>
-          <li onClick={()=> {
-                    setLogin(!Login); }}>
-            {(!Login) ? <Link to="/login-signup">로그인</Link>
-                : "로그아웃"
-            }
-          </li>
-          <li onClick={()=> {
-                    setLogin(!Login); }}>
-            {(!Login) ?  <Link to="/login-signup">회원가입</Link> :   <Link to="/my-page"> 마이페이지 </Link>}
-          </li>
+          {
+              (!loggedIn) 
+            ? 
+              <>
+                <li><Link to="/login-signup">로그인</Link></li> 
+                <li><Link to="/login-signup">회원가입</Link></li> 
+              </>
+            :
+              <>
+                <li><Link to="/login-signup">마이페이지</Link></li> 
+                <li onClick={() => alert("정상적으로 로그아웃 되었습니다!")}>
+                {/* <li> */}
+                  <Link to="/login-signup">로그아웃</Link>
+                </li> 
+              </>
+          }
         </ul>
       </div>
     )

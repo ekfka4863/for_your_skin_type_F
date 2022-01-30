@@ -104,7 +104,7 @@
     
             // LoginTap 시작부분 
             .LoginTapWrapper {
-            position: absolute;
+            position: relative;
             left:-50px;
               .LoginTap_none{
                 display: none;
@@ -112,16 +112,45 @@
               .LoginTap {
                 background-color:rgb(156, 156, 156);
                 display: flex;
+                flex-direction: column;
                 position: absolute;
-                width:180px;
-                height:50px;
+                top: 15px;
+                right: -28%;
+                width: auto;
+                height: auto;
                 text-align: center;
                 border-radius: 15px;
                 li {
+                  width: 90px;
+                  line-height: 50px;
+                  border-radius: 15px;
+                  font-size: 18px;
+                  font-weight: 500;
+                  color: #fff;
+                  // background-color: #ea1;
+                  a {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                  }// a
+                }// li
+                li:first-child {
+                  position: relative;
+                  margin-bottom: 5px;
+                }
+                li:first-child::before {
                   display: block;
-                  width:85px;
-                  margin-left:2px;
-                  line-height:50px;
+                  content: "";
+                  overflow: hidden;
+                  position: absolute;
+                  top: -20px; 
+                  right: 40%;
+                  // transform: translate(-50%);
+                  width: 15px;
+                  height: 20px;
+                  // background-color: #fff;
+                  background-color:rgb(156, 156, 156);
+                  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
                 }
               }
           
