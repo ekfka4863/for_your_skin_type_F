@@ -1,3 +1,4 @@
+import React, {Component} from 'react';
 import { useEffect, useState } from "react";
 
 // 공통 컴포넌트 임포트 
@@ -24,11 +25,15 @@ const user1 = {
 };
 
 
-// for signup api to bring data of certain user's favorite items
-// const url = 'http://localhost:9090/login';
-// import data from "../pages/LoginSignup"; 
-const sessionId = sessionStorage.getItem(data).sessionId;
-console.log("sessionId in MyCart.js => ", sessionId);
+// // for signup api to bring data of certain user's favorite items
+// // const url = 'http://localhost:9090/login';
+// // import data from "../pages/LoginSignup"; 
+
+// console.log("data => ", data);
+
+// // const sessionId = sessionStorage.getItem(data).sessionId;
+// // console.log("sessionId in MyCart.js => ", sessionId);
+// // 저희가 원하는 것: 세션아이디가 지금 로그인 된 아이디의 유저에게 있는지 확인하고, 
 
 
 // 상품을 장바구니에 추가하고 싶을 때 보내는 POST request
@@ -64,12 +69,12 @@ if (user1.loggedIn === true) {
       console.log("POST request to server done!! No problem!");
       console.log(data);
     } catch(error) {
-      console.log("POST request XXXXXX!!");
+      console.log("POST request XXXXXX!! - 장바구니");
     }
   } 
   asyncFavoriteItemsAddPost();
 } else {
-  alert("장바구니는 로그인 후 이용할 수 있는 서비스입니다.");
+  // alert("장바구니는 로그인 후 이용할 수 있는 서비스입니다.");
 }
 
 
@@ -112,7 +117,7 @@ if (user1.loggedIn === true) {
   } 
   asyncFavoriteItemsDeletePost();
 } else {
-  alert("장바구니는 로그인 후 이용할 수 있는 서비스입니다.");
+  // alert("장바구니는 로그인 후 이용할 수 있는 서비스입니다.");
 }
 
 
@@ -170,5 +175,6 @@ function MyCart () {
 
 
 export default MyCart;  
+
 
 
