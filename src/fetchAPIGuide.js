@@ -11,6 +11,7 @@
 // http://localhost:9090/signup
 
 // GET: 로그인 후 user 정보를 담은 마이페이지 api  
+// POST: 위에 GET 요청이 아니라 로그인 후 user 정보를 담은 마이페이지 api  
 // http://localhost:9090/mypage
 
 

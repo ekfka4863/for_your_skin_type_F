@@ -1,16 +1,29 @@
-import React from "react";
 import Router from "./Router";
 
 // css
 import "./styles/common/reset.css";
 import "./styles/common/common.css";
 
-function App() {
+// Context API
+import AuthContext from "./context/auth-context";
+
+
+export default function App() {
   return (
-    <>
-      <Router />
-    </>
+    <AuthContext.Provider 
+      value={{
+        userId: "",
+        isLoggedIn: false,
+        userName: "",
+        userPhoneNumber: "",
+        userEmail: "",
+        userGender: ""
+      }}
+    >
+      <Router /> 
+    </AuthContext.Provider>
   );
 }
 
-export default App;
+// reference: https://www.freecodecamp.org/news/react-context-for-beginners/
+

@@ -19,6 +19,8 @@ import MyCart from './pages/MyCart';
 import LoginSignup from './pages/LoginSignup';
 import MyPage from './components/MyPage';
 
+import LoggedInPage from './pages/LoggedInPage';
+
 
 
 const Router = () => (
@@ -34,6 +36,7 @@ const Router = () => (
       <Route path="/my-cart" element={<MyCart />} />
       <Route path="/login-signup" element={<LoginSignup />} />
       <Route path="/my-page" element={<MyPage />} />
+      <Route path="/logged-in-page" element={<LoggedInPage />} />
     </Routes>
   </BrowserRouter>
 );

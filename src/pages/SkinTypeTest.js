@@ -1,5 +1,3 @@
-import React, {Component} from 'react';
-
 import { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 
@@ -323,7 +321,8 @@ function SkinTypeTest () {
 
   // =================================================================
   // API 
-  const url = 'http://localhost:9090/items/skintype';
+  // const url = 'http://localhost:9090/items/skintype';
+  const url = '/items/skintype';
 
   useEffect(() => {
     // console.log(skinType);

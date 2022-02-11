@@ -3,17 +3,12 @@
 
 /* laptop & desktop */
 form {
-  padding-top:90px;
-  width:500px;
-  height:500px;
-
   .Login_Id_box,
   .Pw_Id_box {
-    width:500px;
+    display: flex;
     height: 100px;
     border-radius:10px;
     background-color:rgb(156, 156, 156);
-    display: flex;
     img {
       margin-left: 20px;
     }
@@ -31,6 +26,7 @@ form {
 
   .Login_Id_box {
     padding-top: 25px;
+    margin-top: 40px;
     margin-bottom: 20px;
     // img {}
     input {
@@ -51,7 +47,7 @@ form {
 
   .Login_button {
     float:right;
-    padding-top: 40px;
+    padding-top: 20px;
     input {
       width:100px;
       height:60px;
@@ -75,45 +71,23 @@ form {
 /* mobile */
 @include mobile {
   form {
-    padding-top:90px;
-    width:500px;
-    margin:0 auto;
-    height:500px;
     .Login_Id_box{
       margin-left:15px;
       width:320px;
       height:70px;
-      background-color:rgb(156, 156, 156);
-      display: flex;
-      margin-bottom: 20px;
-      border-radius:15px;
       img{
-        margin-left: 20px;
+        width:45px;
+        height:45px;
         margin-top:-10px;
-        width:42px;
-        height:42px;
       }
       input{
-      padding-left:10px;
       padding-top: 5px;
-      outline:none;
-      border:none;
-      background-color:rgb(156, 156, 156);
-      cursor: pointer;
-      }
-      input::placeholder{
-        color:#eaeaea;
-        font-size:17px;
       }
     }
     .Pw_Id_box{
-      padding-top: 20px;
-      margin-left:15px;
       width:320px;
       height:70px;
-      background-color:rgb(156, 156, 156);
-      display: flex;
-      border-radius:10px;
+      margin-left:15px;
       img{
         width:45px;
         height:45px;
@@ -124,36 +98,13 @@ form {
       padding-top: 11px;
       padding-left:5px;
       width:200px;
-      outline:none;
-      border:none;
-      background-color:rgb(156, 156, 156);
-      cursor: pointer;
-      }
-      input::placeholder{
-        color:#eaeaea;
-        font-size:17px;
       }
     }
     .Login_button{
       position: absolute;
-      left:210px;
-      padding-top:80px;
-      input{
-        width:100px;
-        height:60px;
-        margin:0 auto;
-        outline:none;
-        border:none;
-        background-color:rgb(156, 156, 156);
-        font:20px/60px "나눔고딕",sans-serif;
-        border-radius:15px;
-        cursor: pointer;
-        }
-
-        input:hover{
-          background-color:$dark-gray;
-          color: #fff;
-        }
+      right: 15px;
+      top: 230px;
+      // input {}
     }
   }// form 
 }
@@ -162,78 +113,31 @@ form {
 /* tablet */
 @include tablet {
   form {
-    padding-top:90px;
-    width:500px;
-    margin:0 auto;
-    height:500px;
     .Login_Id_box{
-      padding-top: 25px;
-      width:500px;
-      height: 100px;
-      background-color:rgb(156, 156, 156);
-      display: flex;
-      margin-bottom: 20px;
-      border-radius:10px;
-      img{
-        margin-left: 20px;
-      }
-      input{
-      padding-left: 10px;
-      padding-top: 20px;
-      outline:none;
-      border:none;
-      background-color:rgb(156, 156, 156);
-      cursor: pointer;
-      }
+      margin-top: 40px;
+      // img {}
+      // input {}
       input::placeholder{
         color:#eaeaea;
         font-size:17px;
       }
     }
-    .Pw_Id_box{
-      padding-left: 10px;
-      padding-top: 20px;
-      width:500px;
-      height: 100px;
-      background-color:rgb(156, 156, 156);
-      display: flex;
-      border-radius:10px;
-      img{
+    .Pw_Id_box {
+      img {
         margin-left:10px;
       }
-      input{
-      padding-top: 23px;
-      padding-left:5px;
-      width:300px;
-      outline:none;
-      border:none;
-      background-color:rgb(156, 156, 156);
-      cursor: pointer;
-      }
+      // input {}
       input::placeholder{
         color:#eaeaea;
         font-size:17px;
       }
     }
-    .Login_button{
-      float:right;
+    .Login_button {
       padding-top: 20px;
-      input{
-        width:100px;
-        height:80px;
-        margin:0 auto;
-        outline:none;
-        border:none;
-        background-color:rgb(156, 156, 156);
-        font:20px/65px "나눔고딕",sans-serif;
+      input {
+        height:70px;
         border-radius:15px;
-        cursor: pointer;
-        }
-
-        input:hover{
-          background-color:$dark-gray;
-          color: #fff;
-        }
+      }
     }
   }// form 
 }
